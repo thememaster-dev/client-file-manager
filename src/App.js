@@ -7,10 +7,10 @@ function App(props) {
 
   return (
     <div className="App">
-      <UserInputForm />
+      {/* <UserInputForm /> */}
       <br />
       <br />
-      {/* <UserInputVideoForm /> */}
+      <UserInputVideoForm />
       <br />
       <br />
       <DisplayData />

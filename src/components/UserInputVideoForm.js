@@ -5,6 +5,8 @@ import { formData } from '../state/ducks/dispatch';
 const UserInputVideoForm = (props) => {
     const { onSubmit, data } = props;
     const [videoState, setVideoState] = useState(null);
+    const [type, setType] = useState(null);
+
     const videoRef = useRef();
     const videoSourceRef = useRef();
 
@@ -17,6 +19,7 @@ const UserInputVideoForm = (props) => {
                 setVideoState(event.target.result);
                 videoRef.current.load();
             }
+            setType(e.target.files[0].type);
             reader.readAsDataURL(e.target.files[0]);
         }
     }
@@ -30,7 +33,7 @@ const UserInputVideoForm = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <video controls ref={videoRef}>
+            <video controls ref={videoRef} style={{ height: '150px', width: '300px' }}>
                 <source ref={videoSourceRef} />
                 Your browser does not support the video tag.
             </video>

@@ -13,12 +13,12 @@ const DisplayData = (props) => {
     return (
         <div>
             {formData.length !== 0 ? formData?.map((item, i) => <div key={i}>
-                <img src={item.imgState} alt="" style={ {height: '100px', width: '100px', borderRadius: '100%'}}/> <br />
-                {/* <video controls>
+                {/* <img src={item.imgState} alt="" style={ {height: '100px', width: '100px', borderRadius: '100%'}}/> <br /> */}
+                <video controls style={ {height: '150px', width: '300px'}}>
                     <source src={item.videoState} />
                     Your browser does not support the video tag.
                 </video>
-                <audio controls >
+                {/* <audio controls >
                     <source src={item.audioState} />
                     Your browser does not support the video tag.
                 </audio> */}
