@@ -1,5 +1,7 @@
 import DisplayData from './components/DisplayData';
-import UserInputForm from './components/UserInputForm';
+import UserInputAudioForm from './components/UserInputAudioForm';
+import UserInputForm from './components/UserInputImageForm';
+import UserInputVideoForm from './components/UserInputVideoForm';
 
 function App(props) {
 
@@ -8,8 +10,14 @@ function App(props) {
       <UserInputForm />
       <br />
       <br />
+      {/* <UserInputVideoForm /> */}
+      <br />
       <br />
       <DisplayData />
+      <br />
+      <br />
+      <br />
+      {/* <UserInputAudioForm /> */}
     </div>
   );
 }
