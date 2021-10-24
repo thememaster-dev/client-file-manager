@@ -19,15 +19,3 @@ export const formData = (state = initialState, action) => {
             return state;
     }
 }
-
-export const newState = (state = initialState, action) => {
-    switch (action.type) {
-        case 'onDelete':
-            console.log(action.payload);
-            return {
-                data: [...state.data.splice(0, state.data.length, ...action.payload)]
-            };
-        default:
-            return state
-    }
-}
